@@ -38,7 +38,12 @@ func main() {
 	}
 	randomIndex := rand.Intn(len(fortunes))
 	theFortune := fortunes[randomIndex]
+	if theFortune.Language == "English" {
 
-	fmt.Println("Cookie says: ")
-	fmt.Println((theFortune.Message))
+		fmt.Println("Cookie says: ")
+		fmt.Println((theFortune.Message))
+	} else {
+		fmt.Println("La galleta dice: ")
+		fmt.Println((theFortune.Message))
+	}
 }
